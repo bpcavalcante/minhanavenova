@@ -31,8 +31,6 @@ public class Fabricante {
 	private List<Modelo> modelo;
 	
 
-	
-
 	public long getId() {
 		return id;
 	}
@@ -57,10 +55,6 @@ public class Fabricante {
 		this.modelo = modelo;
 	}
 
-	
-	
-	
-	
 	
 
 }
