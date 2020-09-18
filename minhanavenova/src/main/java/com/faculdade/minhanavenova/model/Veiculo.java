@@ -36,7 +36,7 @@ public class Veiculo {
 	private int cambio;
 	
 	@NotNull
-	@Size(max = 10)
+	@Size(max = 300)
 	private int km;
 	
 	
