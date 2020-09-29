@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -19,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Fabricante {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@NotNull
@@ -54,7 +55,5 @@ public class Fabricante {
 	public void setModelo(List<Modelo> modelo) {
 		this.modelo = modelo;
 	}
-
 	
-
 }

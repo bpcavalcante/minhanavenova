@@ -1,14 +1,15 @@
 package com.faculdade.minhanavenova.model;
 
 
-import java.util.List;
+
+
+
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -66,13 +67,15 @@ public class Veiculo {
 	@JsonIgnoreProperties("veiculo")
 	private Combustivel combustivel;
 	
-	@ManyToMany(mappedBy = "veiculos")
-	private List<Opcionais> opcionais;
-	
 	@OneToOne(cascade = CascadeType.MERGE)
 	@JsonIgnoreProperties("veiculo")
 	private Modelo modelo;
 	
+
+	
+
+
+
 
 	public long getId() {
 		return id;
@@ -120,14 +123,6 @@ public class Veiculo {
 
 	public void setAnoModelo(String anoModelo) {
 		this.anoModelo = anoModelo;
-	}
-
-	public List<Opcionais> getOpcionais() {
-		return opcionais;
-	}
-
-	public void setOpcionais(List<Opcionais> opcionais) {
-		this.opcionais = opcionais;
 	}
 
 	public boolean isLicenciado() {

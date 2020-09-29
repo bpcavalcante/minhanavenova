@@ -27,7 +27,7 @@ public class Combustivel {
 	@Size(max = 50)
 	private String nome;
 	
-	@OneToMany(mappedBy = "combustivel",cascade = CascadeType.ALL) /*****/
+	@OneToMany(mappedBy = "combustivel",cascade = CascadeType.MERGE)
 	@JsonIgnoreProperties("combustivel")
 	private List<Veiculo> veiculo;
 	

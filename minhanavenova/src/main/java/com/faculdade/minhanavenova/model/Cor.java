@@ -29,7 +29,7 @@ public class Cor {
 	@Size(max = 30)
 	private String nome;
 	
-	@OneToMany(mappedBy = "cor",cascade = CascadeType.ALL)/*****/
+	@OneToMany(mappedBy = "cor",cascade = CascadeType.MERGE)
 	@JsonIgnoreProperties("cor")
 	private List<Veiculo> veiculo;	
 
