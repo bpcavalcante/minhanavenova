@@ -10,6 +10,6 @@ import com.faculdade.minhanavenova.model.Veiculo;
 @Repository
 public interface VeiculoRepository extends JpaRepository<Veiculo, Long> {
 	
-	public List<Veiculo> findAllByPlacaContainingIgnoreCase(String placa);
+	public List<Veiculo> findAllByDescricaoContainingIgnoreCase(String descricao);
 
 }

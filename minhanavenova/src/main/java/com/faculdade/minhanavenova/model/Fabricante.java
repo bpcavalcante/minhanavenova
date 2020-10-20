@@ -1,19 +1,19 @@
 package com.faculdade.minhanavenova.model;
 
-import java.util.List;
+//import java.util.List;
 
-import javax.persistence.CascadeType;
+//import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+//import javax.persistence.OneToMany;
 
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "TB_FABRICANTE")
@@ -27,9 +27,9 @@ public class Fabricante {
 	@Size(max = 30)
 	private String nome;
 	
-	@OneToMany(mappedBy = "fabricante" , cascade = CascadeType.ALL )
+	/*@OneToMany(mappedBy = "fabricante" , cascade = CascadeType.ALL )
 	@JsonIgnoreProperties("fabricante")
-	private List<Modelo> modelo;
+	private List<Modelo> modelo;*/
 	
 
 	public long getId() {
@@ -48,12 +48,13 @@ public class Fabricante {
 		this.nome = nome;
 	}
 
+	/*
 	public List<Modelo> getModelo() {
 		return modelo;
 	}
 
 	public void setModelo(List<Modelo> modelo) {
 		this.modelo = modelo;
-	}
+	}*/
 	
 }

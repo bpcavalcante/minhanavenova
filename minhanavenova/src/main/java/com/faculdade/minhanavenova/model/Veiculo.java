@@ -1,10 +1,4 @@
 package com.faculdade.minhanavenova.model;
-
-
-
-
-
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,53 +23,45 @@ public class Veiculo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
+	/*@NotNull
 	@Size(min = 7 , max = 7)
-	private String placa;
+	private String placa;*/
 	
-	@NotNull
-	private int cambio;
+	/*@NotNull
+	private String cambio;*/
 	
-	@NotNull
-	@Size(max = 300)
+	
 	private int km;
 	
 	
-	private String anoFabricante;
+	private String anofabricante;
+	
+	private String foto;
 	
 	
-	private String anoModelo;
+	private String anomodelo;
 	
-	@NotNull
-	private boolean licenciado;
 	
-	@NotNull
-	private boolean ipva;
 	
-	@NotNull
-	@Size(max = 300)
 	private String descricao;
 	
-	@Size(max = 30)
+	
 	private double valor;
 	
-	@OneToOne(cascade = CascadeType.MERGE)
+	private String modelo;
+	
+	/*@OneToOne(cascade = CascadeType.MERGE)
 	@JsonIgnoreProperties("veiculo")
-	private Cor cor;
+	private Cor cor;*/
 	
-	@OneToOne(cascade = CascadeType.MERGE)
+	/*@OneToOne(cascade = CascadeType.MERGE)
 	@JsonIgnoreProperties("veiculo")
-	private Combustivel combustivel;
+	private Combustivel combustivel;*/
 	
-	@OneToOne(cascade = CascadeType.MERGE)
+	/*@OneToOne(cascade = CascadeType.MERGE)
 	@JsonIgnoreProperties("veiculo")
-	private Modelo modelo;
+	private Modelo modelo;*/
 	
-
-	
-
-
-
 
 	public long getId() {
 		return id;
@@ -85,7 +71,7 @@ public class Veiculo {
 		this.id = id;
 	}
 
-	public String getPlaca() {
+	/*public String getPlaca() {
 		return placa;
 	}
 
@@ -93,13 +79,13 @@ public class Veiculo {
 		this.placa = placa;
 	}
 
-	public int getCambio() {
+	public String getCambio() {
 		return cambio;
 	}
 
-	public void setCambio(int cambio) {
+	public void setCambio(String cambio) {
 		this.cambio = cambio;
-	}
+	}*/
 
 	public int getKm() {
 		return km;
@@ -109,36 +95,32 @@ public class Veiculo {
 		this.km = km;
 	}
 
-	public String getAnoFabricante() {
-		return anoFabricante;
+
+	
+	
+
+	public String getAnofabricante() {
+		return anofabricante;
 	}
 
-	public void setAnoFabricante(String anoFabricante) {
-		this.anoFabricante = anoFabricante;
+	public void setAnofabricante(String anofabricante) {
+		this.anofabricante = anofabricante;
 	}
 
-	public String getAnoModelo() {
-		return anoModelo;
+	public String getAnomodelo() {
+		return anomodelo;
 	}
 
-	public void setAnoModelo(String anoModelo) {
-		this.anoModelo = anoModelo;
+	public void setAnomodelo(String anomodelo) {
+		this.anomodelo = anomodelo;
 	}
 
-	public boolean isLicenciado() {
-		return licenciado;
+	public String getModelo() {
+		return modelo;
 	}
 
-	public void setLicenciado(boolean licenciado) {
-		this.licenciado = licenciado;
-	}
-
-	public boolean isIpva() {
-		return ipva;
-	}
-
-	public void setIpva(boolean ipva) {
-		this.ipva = ipva;
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
 
 	public String getDescricao() {
@@ -157,7 +139,17 @@ public class Veiculo {
 		this.valor = valor;
 	}
 
-	public Cor getCor() {
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
+	
+
+	/*public Cor getCor() {
 		return cor;
 	}
 
@@ -171,15 +163,15 @@ public class Veiculo {
 
 	public void setCombustivel(Combustivel combustivel) {
 		this.combustivel = combustivel;
-	}
+	}*/
 
-	public Modelo getModelo() {
+	/*public Modelo getModelo() {
 		return modelo;
 	}
 
 	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
-	}
+	}*/
 	
 	
 }

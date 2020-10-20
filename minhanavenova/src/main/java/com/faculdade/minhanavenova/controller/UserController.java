@@ -49,16 +49,19 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(user));
 	}
 	
+	@PostMapping("/logar")
+	public ResponseEntity<UsuarioLogin> Autentication(@RequestBody Optional<UsuarioLogin> user){
+		return usuarioService.Logar(user)
+				.map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+	}
+	
 	@PostMapping("/cadastrar")
 	public ResponseEntity<User> cadastrar(@RequestBody User user){
 		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.CadastrarUsuario(user));
 	}
 	
-	@PostMapping("/logar")
-	public ResponseEntity<UsuarioLogin> logar(@RequestBody Optional<UsuarioLogin> user){
-		return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
-	}
+
 	
 	@PutMapping
 	public ResponseEntity<User> put (@RequestBody User user){

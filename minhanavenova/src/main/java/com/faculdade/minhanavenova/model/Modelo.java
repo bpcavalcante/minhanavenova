@@ -24,9 +24,9 @@ public class Modelo {
 	@Size(max = 100)
 	private String nome;
 	
-	@OneToOne(cascade = CascadeType.MERGE)
+	/*@OneToOne(cascade = CascadeType.MERGE)
 	@JsonIgnoreProperties("modelo")
-	private Fabricante fabricante;
+	private Fabricante fabricante;*/
 
 	public long getId() {
 		return id;
@@ -44,13 +44,13 @@ public class Modelo {
 		this.nome = nome;
 	}
 
-	public Fabricante getFabricante() {
+	/*public Fabricante getFabricante() {
 		return fabricante;
 	}
 
 	public void setFabricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
-	}
+	}*/
 	
 	
 
